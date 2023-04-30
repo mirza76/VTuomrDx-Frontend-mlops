@@ -1,4 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("assets/background.png");
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+header {
+    height: max-content;
+}
+
+main {
+    height: 75vh;
+    color: whitesmoke;
+}
+
+main .row {
+    width: 100%;
+}
+
+footer {
+    height: 10vh;
+}
+
 #logo {
     height: 100px;
     width: 100px;

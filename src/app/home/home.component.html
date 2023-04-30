@@ -1,0 +1,25 @@
+<main>
+  <div class="row w-100 mx-auto">
+    <div
+      class="col-auto col-lg-6 col-md-12 col-sm-12 d-flex flex-column justify-content-center"
+    >
+      <!-- Text -->
+      <h1 class="text-uppercase text-center">
+        Automated brain tumor Detection
+      </h1>
+      <p class="text-capitalize text-center">
+        web based AI platform to detect brain tumor on MRI images
+      </p>
+      <div class="d-flex justify-content-center w-100" id="link-btns">
+        <a [routerLink]="'/prediction'" class="btn btn-light w-25 mx-2">Predict Tumor</a>
+        <a [routerLink]="'/evaluation'" class="btn btn-outline-light w-25 mx-2">Results</a>
+      </div>
+    </div>
+    <div
+      class="col-auto col-lg-6 col-md-12 col-sm-12 my-4 d-flex justify-content-center"
+    >
+      <!-- Image -->
+      <img src="assets/main-page-image.png" alt="" />
+    </div>
+  </div>
+</main>

@@ -1,0 +1,57 @@
+<main class="d-flex flex-column justify-content-center">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-auto col-lg-3 col-md-3 col-sm-12 d-flex flex-column">
+      <button class="btn btn-outline-light" (click)="displayConfusionMatrix()">
+        Confustion Matrix
+      </button>
+      <button
+        class="btn btn-outline-light my-2"
+        (click)="displayClassificationReport()"
+      >
+        Clasification Report
+      </button>
+    </div>
+
+    <div class="col-auto col-lg-8 col-md-8 col-sm-12">
+      <div class="d-flex justify-content-center my-2">
+        <button class="btn btn-outline-light" (click)="displayTestSplit()">
+          Test Split
+        </button>
+        <button
+          class="btn btn-outline-light mx-2"
+          (click)="displayTestingDataset()"
+        >
+          Testing Dataset
+        </button>
+      </div>
+      <div class="table-responsive">
+        <table class="table w-100">
+          <thead>
+            <tr class="table-dark text-center" >
+              <th><p>#</p></th>
+              <th *ngFor="let item of currentHeadings" >
+                <p>{{ item }}</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of currentData; let j = index">
+              <td
+                *ngFor="let subItem of item; let i = index"
+                [ngClass]="
+                  i == 0
+                    ? 'table-dark fw-bold text-center'
+                    : 'table-light text-dark text-center'
+                "
+              >
+                <p [ngClass]="i == j + 1 && isConfusionMatrix ? 'fw-bold' : ''">
+                  {{ subItem }}
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>

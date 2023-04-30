@@ -1,7 +1,21 @@
-<div class="d-flex flex-column justify-content-center align-items-center">
-  <label for="image" class="fs-4">Upload Image</label>
-  <form class="form-control" style="width: min-content; border: 0px;" (submit)="uploadImage()">
-    <input type="file" name="image" id="image" [(ngModel)]="image" (change)="onUpload($event)"/>
-    <button *ngIf="image" type="submit" class="btn text-light my-2 w-50">Detect</button>
+<div
+  class="d-flex flex-column justify-content-center align-items-center bg-light"
+>
+  <label for="image" class="fs-4 my-1">Upload Image</label>
+  <form
+    class="form-control"
+    style="width: min-content; border: 0px; background-color: transparent"
+    (submit)="uploadImage()"
+  >
+    <input
+      type="file"
+      name="image"
+      id="image"
+      [(ngModel)]="image"
+      (change)="onUpload($event)"
+    />
+    <button *ngIf="image" type="submit" class="btn text-light w-50 my-2">
+      Detect
+    </button>
   </form>
 </div>

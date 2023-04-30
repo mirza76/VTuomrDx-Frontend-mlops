@@ -1,3 +1,17 @@
-header {
+/* header {
     background-color: #103884!important;
+} */
+
+header nav ul li {
+  margin: 0px 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+  opacity: 0.8;
+}
+
+header nav ul li a:hover {
+  opacity: 1;
 }

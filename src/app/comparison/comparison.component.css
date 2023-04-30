@@ -1,0 +1,5 @@
+@media (max-width: 450px) {
+    #models-comparison-chart {
+        display: -webkit-inline-box!important;
+    }
+}

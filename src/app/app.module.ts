@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,12 @@ import { ResultComponent } from './vtumordx/result/result.component';
 import { FormsModule } from '@angular/forms';
 import { API_CONFIG, API_SERVICE } from './AppConfig/appconfig.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { OverviewComponent } from './overview/overview.component';
+import { RgaocComponent } from './rgaoc/rgaoc.component';
+import { ApproachComponent } from './approach/approach.component';
+import { EvaluationComponent } from './evaluation/evaluation.component';
+import { ComparisonComponent } from './comparison/comparison.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +26,20 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     VtumordxComponent,
     UploadComponent,
-    ResultComponent
+    ResultComponent,
+    HomeComponent,
+    OverviewComponent,
+    RgaocComponent,
+    ApproachComponent,
+    EvaluationComponent,
+    ComparisonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     FormsModule,
     HttpClientModule,
+    HighchartsChartModule,
   ],
   providers: [
     {
