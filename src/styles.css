@@ -6,8 +6,9 @@
 
 body {
     background-image: url("assets/background.png");
+    background-size: cover;
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 header {
@@ -15,7 +16,8 @@ header {
 }
 
 main {
-    height: 75vh;
+    min-height: 75vh;
+    height: max-content;
     color: whitesmoke;
 }
 

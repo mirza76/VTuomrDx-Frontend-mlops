@@ -6,32 +6,53 @@ import { Component } from '@angular/core';
   styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent {
+  /*
+    Indexes distribution
 
-  currText?: string;
+    0 for what is brain tumor
+    1 why is it important to be diagonsed earlier
+    2 types
+    3 motivation
+  */
 
-  screenText: any = [
-    {
-      title: "Motivation",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, porro quam optio repellat sit sunt odit enim maiores consequatur dolor corrupti nisi velit praesentium fugit, magnam animi. Exercitationem, dicta libero.",
-    },
-    {
-      title: "What is Tumor",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, porro quam optio repellat sit sunt odit enim maiores consequatur dolor corrupti nisi velit praesentium fugit, magnam animi. Exercitationem, dicta libero.",
-    },
-    {
-      title: "Types of Tumor",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, porro quam optio repellat sit sunt odit enim maiores consequatur dolor corrupti nisi velit praesentium fugit, magnam animi. Exercitationem, dicta libero.",
-    },
-    {
-      title: "Why Is It Important To Be diagonsed?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, porro quam optio repellat sit sunt odit enim maiores consequatur dolor corrupti nisi velit praesentium fugit, magnam animi. Exercitationem, dicta libero.",
-    },
-  ]
-
+    screenHeadings: Array<boolean> = [false, false, false, true]; 
   constructor() {
+  }
+
+  display(id: number) {
+    switch (id) {
+      case 0:
+        this.screenHeadings[0] = !this.screenHeadings[0];
+        this.screenHeadings[1] = false;
+        this.screenHeadings[2] = false;
+        this.screenHeadings[3] = false;
+        break;
+      case 1:
+        this.screenHeadings[1] = !this.screenHeadings[1];
+        this.screenHeadings[0] = false;
+        this.screenHeadings[2] = false;
+        this.screenHeadings[3] = false;
+        break;
+
+      case 2:
+        this.screenHeadings[2] = !this.screenHeadings[2];
+        this.screenHeadings[0] = false;
+        this.screenHeadings[1] = false;
+        this.screenHeadings[3] = false;
+        break;
+
+      case 3:
+        this.screenHeadings[3] = !this.screenHeadings[3];
+        this.screenHeadings[0] = false;
+        this.screenHeadings[1] = false;
+        this.screenHeadings[2] = false;
+        break;
+    }
 
   }
-  changeText(id: number) {
-    this.currText = this.screenText[id]["description"];
+
+  show(ele: HTMLHeadingElement) {
+    ele.click();
   }
+
 }

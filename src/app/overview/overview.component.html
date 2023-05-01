@@ -1,14 +1,254 @@
 <main>
   <div class="row justify-content-center">
-    <div class="col-auto col-lg-3 col-md-3 col-sm-12">
-      <h4 *ngFor="let item of screenText; let i = index">
-        <p class="btn btn-outline-light" (click)="changeText(i)">
-          {{ item.title }}
-        </p>
-      </h4>
+    <div class="col-12">
+      <h4 type="button" (click)="display(3)">Our Motivation</h4>
+      <p *ngIf="screenHeadings[3]">
+        A tumor is an abnormal growth and division of unhealthy and harmful
+        cells inside a human organ, muscle or bone, in an uncontrolled manner.
+        These unhealthy cells tend to take up all the nutrients of healthy cells
+        and tissues causing failure of that specific organ. Talking about the
+        brain, it is the most critical and vital organ of the human body and a
+        tumor inside the brain can deteriorate its functionality completely.
+        <br />
+        Every year, near about 11,000 persons are diagnosed of brain tumors.
+        <br />
+        Brain tumors account for 85% to 90% of all primary central nervous
+        system (CNS) tumors.
+        <br />
+        It is estimated that 18,280 adults in the United States (10,710 men and
+        seven,570 women) will die from primary cancerous brain and CNS tumors
+        this year. Worldwide, an estimated 251,329 people died from primary
+        cancerous brain and CNS tumors in 2020.(Brain Tumor: Statistics, n.d.)
+        Hence, brain tumor is an extremely aggressive and life threatening
+        condition which has to be diagnosed and cured immediately in order to
+        prevent mortality
+      </p>
     </div>
-    <div class="col-auto col-lg-6 col-md-6 col-sm-12 my-2">
-      <p *ngIf="currText">{{ currText }}</p>
+    <div class="col-12">
+      <h4 type="button" (click)="display(0)">What is Brain Tumor</h4>
+      <p *ngIf="screenHeadings[0]">
+        A tumor is an abnormal growth and division of unhealthy and harmful
+        cells inside a human organ, muscle or bone, in an uncontrolled manner.
+        <br />
+        A brain tumor is an abnormal growth of cells in the brain or surrounding
+        tissues. There are two types of brain tumors: primary brain tumors,
+        which start in the brain, and metastatic brain tumors, which are caused
+        by cancer cells that have spread to the brain from other parts of the
+        body. Primary brain tumors can be benign or malignant. Benign tumors are
+        not cancerous and do not spread to other parts of the body, but they can
+        still cause problems if they grow too large or press on important areas
+        of the brain. Malignant tumors, on the other hand, are cancerous and can
+        invade nearby tissues and spread to other parts of the body. Brain
+        tumors can cause a variety of symptoms, depending on their size and
+        location. Common symptoms include headaches, seizures, weakness or
+        numbness on one side of the body, changes in vision or hearing, and
+        difficulty with balance or coordination. Treatment options for brain
+        tumors include surgery, radiation therapy, and chemotherapy, and the
+        choice of treatment depends on the type and location of the tumor, as
+        well as the overall health of the patient.
+      </p>
+    </div>
+    <div class="col-12">
+      <h4 type="button" (click)="display(2)">Different Types of Tumors</h4>
+      <div class="tumor-types-info" *ngIf="screenHeadings[2]">
+        <h5
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#gliomaModal"
+          (mouseover)="show(glioma)"
+          #glioma
+          class="heading-btn"
+        >
+          Gliomas
+        </h5>
+        <p>
+          These tumors start in the brain or spinal cord, and they are the most
+          common type of brain tumor. They can be classified into several
+          subtypes, including astrocytomas, oligodendrogliomas, and ependymomas.
+        </p>
+        <h5
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#meningiomaModal"
+          (mouseover)="show(meningioma)"
+          #meningioma
+          class="heading-btn"
+        >
+          Meningiomas
+        </h5>
+        <p>
+          These tumors arise from the meninges, which are the layers of tissue
+          that cover the brain and spinal cord. They are usually benign and
+          slow-growing, but they can cause problems if they grow too large and
+          press on the brain.
+        </p>
+        <h5
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pituitaryModal"
+          (mouseover)="show(pituitary)"
+          #pituitary
+          class="heading-btn"
+        >
+          Pituitary
+        </h5>
+        <p>
+          These tumors develop in the pituitary gland, which is located at the
+          base of the brain. They can cause hormonal imbalances and affect the
+          functioning of the endocrine system.
+        </p>
+      </div>
+    </div>
+    <div class="col-12">
+      <h4 type="button" (click)="display(1)">
+        Why Is It Important To Be Diagonsed Earlier?
+      </h4>
+      <p *ngIf="screenHeadings[1]">
+        Early diagnosis of a brain tumor is important because it can help to
+        improve the chances of successful treatment and reduce the risk of
+        complications. The earlier a brain tumor is detected, the more options
+        there are for treatment, and the more likely it is that the tumor can be
+        removed before it causes significant damage to the brain. Some brain
+        tumors can be difficult to diagnose, as their symptoms can be vague and
+        may resemble those of other conditions. However, if a person experiences
+        persistent or unusual symptoms such as headaches, seizures, or changes
+        in vision or hearing, it is important to see a doctor as soon as
+        possible to rule out the possibility of a brain tumor. Early diagnosis
+        also allows for prompt treatment, which can help to prevent the tumor
+        from growing and spreading to other parts of the brain or body.
+        Treatment options may include surgery, radiation therapy, chemotherapy,
+        or a combination of these approaches, depending on the type, location,
+        and size of the tumor. In summary, early diagnosis of a brain tumor is
+        critical to ensuring the best possible outcome for the patient, by
+        allowing for timely treatment and management of the condition.
+      </p>
     </div>
   </div>
 </main>
+
+<!-- Gliomas Modal -->
+<div
+  class="modal fade"
+  id="gliomaModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Glioma Images</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-auto col-lg-4 col-md-6 col-sm-12">
+            <img src="assets/Gliomas/1.jpg" alt="" class="types-image" />
+          </div>
+          <div class="col-auto col-lg-4 col-md-6 col-sm-12">
+            <img src="assets/Gliomas/2.jpg" alt="" class="types-image" />
+          </div>
+          <div class="col-auto col-lg-4 col-md-6 col-sm-12">
+            <img src="assets/Gliomas/3.jpg" alt="" class="types-image" />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Meningiomas Modal -->
+<div
+  class="modal fade"
+  id="meningiomaModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Meningioma Images
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-auto col-lg-4 col-md-6 col-sm-12">
+            <img src="assets/Meningiomas/1.jpg" alt="" class="types-image" />
+          </div>
+          <div class="col-auto col-lg-4 col-md-6 col-sm-12">
+            <img src="assets/Meningiomas/2.jpg" alt="" class="types-image" />
+          </div>
+          <div class="col-auto col-lg-4 col-md-6 col-sm-12">
+            <img src="assets/Meningiomas/3.jpg" alt="" class="types-image" />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pituitary Modal -->
+<div
+  class="modal fade"
+  id="pituitaryModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Pituitary Images
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-auto col-lg-4 col-md-6 col-sm-12">
+            <img src="assets/Pituitary/1.jpg" alt="" class="types-image" />
+          </div>
+          <div class="col-auto col-lg-4 col-md-6 col-sm-12">
+            <img src="assets/Pituitary/2.jpg" alt="" class="types-image" />
+          </div>
+          <div class="col-auto col-lg-4 col-md-6 col-sm-12">
+            <img src="assets/Pituitary/3.jpg" alt="" class="types-image" />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

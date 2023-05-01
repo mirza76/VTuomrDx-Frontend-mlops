@@ -2,3 +2,21 @@ a {
     text-decoration: none;
     color: whitesmoke;
 }
+
+h4, .heading-btn {
+    width: fit-content;
+}
+
+main .row {
+    width: 80%;
+    margin: auto;
+}
+
+.types-image {
+    height: 200px;
+    width: 200px;
+}
+
+/* h4:hover {
+    box-shadow: 1px 1px black;
+} */

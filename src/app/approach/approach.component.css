@@ -1,0 +1,34 @@
+.approach-images {
+  width: 75px;
+  height: 75px;
+  margin: 6px 6px;
+  border-radius: 15px;
+}
+
+@media (min-width: 800px) {
+    main .row {
+        width: 75%;
+    }
+}
+
+
+@media (max-width: 800px) {
+    main .row {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+  .row div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .approach-images {
+    margin: 20px 6px;
+  }
+
+  .double-image {
+    flex-direction: row !important;
+  }
+}

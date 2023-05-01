@@ -18,6 +18,7 @@ import { RgaocComponent } from './rgaoc/rgaoc.component';
 import { ApproachComponent } from './approach/approach.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import { ComparisonComponent } from './comparison/comparison.component';
+import { TrainingComponent } from './approach/training/training.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ComparisonComponent } from './comparison/comparison.component';
     ApproachComponent,
     EvaluationComponent,
     ComparisonComponent,
+    TrainingComponent,
   ],
   imports: [
     BrowserModule,
