@@ -9,6 +9,7 @@ export class EvaluationComponent {
 
   isConfusionMatrix: boolean = true;
   isTestSplit: boolean = true;
+  isSegmentationResults: boolean = false;
 
   confusionMatrixHeadings: string[] = [
     "Glioma",
@@ -24,6 +25,18 @@ export class EvaluationComponent {
     "Accuracy",
     "Support"
   ];
+
+  segmentationHeadings: string[] = [
+    "Jaccard",
+    "Recall",
+    "Precision",
+    "Accuracy",
+    "Dice Coefficient"
+  ]
+
+  segmentationResults: string[][] = [
+    ["Values", "0.65847", "0.73709", "0.80269", "0.99383", "0.73143"],
+  ]
 
   confusionMatrixTestSplit: string[][] = [
     ["Glioma", "1724", "0", "0", "1"],
@@ -66,6 +79,7 @@ export class EvaluationComponent {
     this.currentData = this.confusionMatrixTestSplit;
     this.isConfusionMatrix = true;
     this.isTestSplit = true;
+    this.isSegmentationResults = false;
   }
 
   displayClassificationReport() {
@@ -73,6 +87,7 @@ export class EvaluationComponent {
     this.currentData = this.classificationReportTestSplit;
     this.isConfusionMatrix = false;
     this.isTestSplit = true;
+    this.isSegmentationResults = false;
   }
 
   displayTestSplit() {
@@ -83,6 +98,14 @@ export class EvaluationComponent {
   displayTestingDataset() {
     if (this.isConfusionMatrix) this.currentData = this.confusionMatrixTestingDataset
     else this.currentData = this.classificationReportTestingDataset;
+  }
+
+  displaySegmentationResults() {
+    this.currentHeadings = this.segmentationHeadings;
+    this.currentData = this.segmentationResults;
+    this.isSegmentationResults = true;
+    this.isTestSplit = false;
+    this.isConfusionMatrix = false;
   }
 
 }
